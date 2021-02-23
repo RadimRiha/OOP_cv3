@@ -106,5 +106,23 @@ namespace OOP_cv3
             }
             return result;
         }
+        public double Determinant()
+        {
+            if (data.GetLength(0) != data.GetLength(1) || data.GetLength(0) > 3) return 0;   //matrix is non square or >3x3
+            switch (data.GetLength(0))
+            {
+                case 0: //empty matrix
+                    return 0;
+                case 1: //1x1
+                    return data[0, 0];
+                case 2: //2x2
+                    return data[0, 0] * data[1, 1] - data[1, 0] * data[0, 1];
+                case 3: //3x3
+                    return data[0, 0] * data[1, 1] * data[2, 2] + data[1, 0] * data[2, 1] * data[0, 2] + data[2, 0] * data[0, 1] * data[1, 2]
+                           - data[2, 0] * data[1, 1] * data[0, 2] - data[1, 0] * data[0, 1] * data[2, 2] - data[0, 0] * data[2, 1] * data[1, 2];
+                default:
+                    return 0;
+            }
+        }
     }
 }
