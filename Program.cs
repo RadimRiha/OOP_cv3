@@ -19,7 +19,7 @@ namespace OOP_cv3
             Console.WriteLine("A*B:\n{0}\n", (matA * matB).ToString());
             Console.WriteLine("A==B:\n{0}\n", matA == matB);
             Console.WriteLine("A!=B:\n{0}\n", matA != matB);
-            Console.WriteLine("-A:\n{0}\n", -matA);
+            Console.WriteLine("-A:\n{0}\n", (-matA).ToString());
             Console.WriteLine("determinant A:\n{0}\n", matA.Determinant());
         }
     }
